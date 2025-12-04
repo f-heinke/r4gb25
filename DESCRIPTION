@@ -1,0 +1,15 @@
+Package: r4gb25
+Type: R package providing code and examples for bioinformatics master’s students at the University of Applied Sciences Mittweida
+Title: Providing course-specific functions.
+Version: 1.0.0
+Authors@R: c(
+    person(
+      "Florian", "Heinke",
+      email = "heinke@hs-mittweida.de",
+      role = c("aut", "cre")
+    )
+  )
+Description: Course materials for winter semester 2025/26
+License: MIT
+Encoding: UTF-8
+LazyData: true
