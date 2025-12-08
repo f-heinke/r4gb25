@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+export( km_scree_test )
+S3method(plot, km_scree_test)
+export(plot.km_scree_test)
+
