@@ -1,5 +1,6 @@
 gp <- function(D, r = NULL){
 
+  D <- as.matrix( D )
   N <- nrow(D) # num of data points
   Np <- N*(N-1) # weighting the approx. integral through the number of unique data pairs
   Ds <- D[upper.tri(D)] # extracting only unique, non-diagonal elements of the distance matrix. Remember d_ii = 0 and d_ij = d_ji, thus only d_ij with i > j are of interest.
