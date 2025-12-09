@@ -32,7 +32,7 @@ gp <- function(D, r = NULL){
   return(gpstats)
 }
 
-gp.graph.analyses <- function(gp.result, ...){
+gp_graph_analyses <- function(gp.result, ...){
   x11()
   plot(gp.result$log.eps, gp.result$log.Cr, xlab = "log(e)", ylab = "log(C_e)", ...)
 

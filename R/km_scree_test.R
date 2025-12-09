@@ -1,6 +1,6 @@
 #' @export km_scree_test
 km_scree_test <- function(X, K, N_replications = 32, init_method = kmpp_init){
-
+  X <- as.matrix( X )
   ssrat_result <- list()
 
   ssrat_stats <- data.frame(k = numeric(0), mean_ssratio = numeric(0), sd_ssratio = numeric(0))
@@ -24,7 +24,8 @@ km_scree_test <- function(X, K, N_replications = 32, init_method = kmpp_init){
 
   scree_test_result <- list(
     stats = ssrat_stats,
-    ssratios = ssrat_result
+    ssratios = ssrat_result,
+    K = K
   )
   class(scree_test_result) <- "km_scree_test"
   return( scree_test_result )
@@ -38,7 +39,16 @@ km_rand_init <- function(X, k){
 #' @export plot.km_scree_test
 plot.km_scree_test <- function( kmst ){
   d <- kmst$ssratios
-  boxplot(d)
+  K <- kmst$K
+  xlb <- as.character(K)
+  boxplot(d, col = adjustcolor( "#406580FF", 0.7),
+          outline = T,
+          notch = T,
+          xlab = "K",
+          ylab = "SS (within) / SS (between)",
+          xaxt = "n")
+
+  axis(1, at = 1:length(K), labels = xlb)
 }
 
 
