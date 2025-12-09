@@ -1,4 +1,4 @@
-#' Title
+#' Implementation of the Grassberger-Procaccia algorithm
 #'
 #' @param D A symmetric distance / dissimilarity matrix of N objects
 #' @param r Optional positive vector of distance cutoffs at which the correlation integral is approximated
@@ -42,6 +42,15 @@ gp <- function(D, r = NULL){
   return(gpstats)
 }
 
+#' Graphical analyses of Grassberger-Procaccia approximated cor integral
+#'
+#' @param gp.result A list of results obtained through the gp function
+#' @param ... Options to be passed to plot
+#'
+#' @returns List of results.
+#' @export
+#'
+#' @examples
 gp_graph_analyses <- function(gp.result, ...){
   x11()
   plot(gp.result$log.eps, gp.result$log.Cr, xlab = "log(e)", ylab = "log(C_e)", ...)
