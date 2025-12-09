@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param D A symmetric distance / dissimilarity matrix of N objects
+#' @param r Optional positive vector of distance cutoffs at which the correlation integral is approximated
+#'
+#' @returns List of results
+#' @export
+#'
+#' @examples
 gp <- function(D, r = NULL){
 
   D <- as.matrix( D )
