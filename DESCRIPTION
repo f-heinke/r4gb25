@@ -1,7 +1,7 @@
 Package: r4gb25
 Type: R package providing code and examples for genomic biotech master’s students at the University of Applied Sciences Mittweida
 Title: Providing course-specific functions.
-Version: 1.2.4
+Version: 1.2.5
 Authors@R: c(
     person(
       "Florian", "Heinke",

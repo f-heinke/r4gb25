@@ -1,9 +1,9 @@
-#' Title
+#' Compute "geometric" standard deviation, without Bessel correction.
 #'
-#' @param x
-#' @param na.rm
+#' @param x Vector containing metric data.
+#' @param na.rm Logical; remove NA data prior to computations. Defaults to FALSE.
 #'
-#' @return
+#' @return Scalar value.
 #' @export sdN
 #'
 #' @examples

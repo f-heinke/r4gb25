@@ -7,7 +7,16 @@
 pca(X, center = T, scale = T, k = 2)
 }
 \arguments{
-\item{k}{}
+\item{X}{A complete (N x n) metric data matrix of N obs units and n features. Can be raw, unscaled data.}
+
+\item{center}{Invoke centering of X. Defaults to TRUE.}
+
+\item{scale}{Invoke scaling of X. Defaults to TRUE.}
+
+\item{k}{The number of principal components to focus on. Defaults to 2}
+}
+\value{
+A list of statistics.
 }
 \description{
 Performs classic principal component "analysis" - or objects usable for analysis, at least

@@ -1,11 +1,11 @@
 #' Performs classic principal component "analysis" - or objects usable for analysis, at least
 #'
-#' @param X
-#' @param center
-#' @param scale
-#' @param k
+#' @param X A complete (N x n) metric data matrix of N obs units and n features. Can be raw, unscaled data.
+#' @param center Invoke centering of X. Defaults to TRUE.
+#' @param scale Invoke scaling of X. Defaults to TRUE.
+#' @param k The number of principal components to focus on. Defaults to 2
 #'
-#' @return
+#' @return A list of statistics.
 #' @export pca
 #'
 #' @examples

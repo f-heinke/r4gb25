@@ -2,13 +2,18 @@
 % Please edit documentation in R/varN.R
 \name{varN}
 \alias{varN}
-\title{Title}
+\title{Compute "geometric" variance, without Bessel correction.}
 \usage{
 varN(x, na.rm = FALSE)
 }
 \arguments{
-\item{na.rm}{}
+\item{x}{Vector containing metric data.}
+
+\item{na.rm}{Logical; remove NA data prior to computations. Defaults to FALSE.}
+}
+\value{
+A scalar value
 }
 \description{
-Title
+Compute "geometric" variance, without Bessel correction.
 }

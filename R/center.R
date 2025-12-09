@@ -1,8 +1,9 @@
+#' Center metric data matrix by column means.
 #'
+#' @param X A complete (N x n) metric data matrix of N obs units and n features.
 #'
-#'
-#'
-#' @export center
+#' @returns Centered data matrix.
+#' @export
 #'
 #' @examples
 center <- function(X){

@@ -2,13 +2,18 @@
 % Please edit documentation in R/sdN.R
 \name{sdN}
 \alias{sdN}
-\title{Title}
+\title{Compute "geometric" standard deviation, without Bessel correction.}
 \usage{
 sdN(x, na.rm = FALSE)
 }
 \arguments{
-\item{na.rm}{}
+\item{x}{Vector containing metric data.}
+
+\item{na.rm}{Logical; remove NA data prior to computations. Defaults to FALSE.}
+}
+\value{
+Scalar value.
 }
 \description{
-Title
+Compute "geometric" standard deviation, without Bessel correction.
 }

@@ -1,9 +1,10 @@
-#' Title
+#' Compute "geometric" variance, without Bessel correction.
 #'
-#' @param x
-#' @param na.rm
 #'
-#' @return
+#' @param x Vector containing metric data.
+#' @param na.rm Logical; remove NA data prior to computations. Defaults to FALSE.
+#'
+#' @return A scalar value
 #' @export varN
 #'
 #' @examples
