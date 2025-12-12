@@ -1,3 +1,12 @@
+#' Simple implementation of k-means++ initialized prototypes. Utilizes sqrd. euclidean distance!
+#'
+#' @param X The (N x n) data matrix
+#' @param k Number of prototypes
+#'
+#' @returns A (K x n) matrix of prototypes
+#' @export
+#'
+#' @examples
 kmpp_init <- function(X, k = 3){
   N <- nrow(X)
   W <- matrix(nc = ncol(X), nr = k)

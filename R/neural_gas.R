@@ -1,4 +1,4 @@
-#' Title
+#' Implementation of the Neural Gas algorithm
 #'
 #' @param X Design or raw data (N x n) matrix
 #' @param K Number of prototypes to compute, defaults to ceiling(nrow(X) / 20)
