@@ -1,3 +1,14 @@
+#' Title
+#'
+#' @param pca_res Results of PCA computations, obtained through pca function
+#' @param class Optional indicator vector of input data size, stating some class information per data point. Used for highlighting plotted projection scores.
+#' @param varnames Optional vector of n feature names.
+#' @param list_plots logical. Should the ggplot objects be returned as list. Default is FALSE?
+#'
+#' @returns If list_plots is set to TRUE, ggplots are returned as list.
+#' @export
+#'
+#' @examples
 pca_ggplots <- function(pca_res,
                             class = NULL,
                             varnames = NULL,
