@@ -1,15 +1,24 @@
-neural_gas <- function(X, K = NULL, W =  NULL, lambda_init = NULL, lambda_stop = 0.001, learn_rate = 0.1, max_iter = nrow(X) * 100){
+#' Title
+#'
+#' @param X Design or raw data (N x n) matrix
+#' @param K Number of prototypes to compute, defaults to ceiling(nrow(X) / 20)
+#' @param W Optional (K x n) matrix of initial prototype data. If given, the K argument is ignored
+#' @param lambda_init Initial general adaption rate
+#' @param lambda_stop Target adaption rate during last adaption step. Default is 0.001.
+#' @param learn_rate Constant adaption rate. Default is 0.1
+#' @param max_iter The number of steps to perform. Defaults to N x 100.
+#' @param verbose Should outputs be printed. Default is TRUE.
+#'
+#' @returns (K x n) matrix of prototype data after learning
+#' @export
+#'
+#' @examples
+neural_gas <- function(X, K = ceiling(nrow(X) / 20), W =  NULL, lambda_init = NULL, lambda_stop = 0.001, learn_rate = 0.1, max_iter = nrow(X) * 100, verbose = TRUE){
   N <- nrow(X)
   n <- ncol(X)
 
-  if(is.null(K)){
-    K <- ceiling(N / 20) # K := number of weights/prototypes
-
-  }
-
   if(is.null(W)){
-    W <- matrix(nr = K, nc = n, data = rnorm(K *n))
-
+    W <- X[ sample(1:N, size = K), ]
   }
   if(is.null(lambda_init)){
     lambda_init  <- K / 3
@@ -42,7 +51,7 @@ neural_gas <- function(X, K = NULL, W =  NULL, lambda_init = NULL, lambda_stop =
     # After that you can decrease lambda ....
 
     lambda <- lambda * delta
-    print(paste(t, "/",max_iter))
+    if( verbose ) print(paste(t, "/",max_iter))
 
   }
   return(W)
